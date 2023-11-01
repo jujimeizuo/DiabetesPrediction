@@ -497,3 +497,6 @@ print('ok')  
 - [数据分析-分类-案例-糖尿病数据集](https://blog.csdn.net/it_liujh/article/details/123271272?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0-123271272-blog-80731565.235^v38^pc_relevant_anti_vip&spm=1001.2101.3001.4242.1&utm_relevant_index=3)
 
 </details>
+
+
+有同学什么都没动，基本的读入数据，最简单的训练，只是把阈值调到0.84，kaggle就有0.92？？？

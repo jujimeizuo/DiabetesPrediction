@@ -86,7 +86,7 @@ with torch.no_grad():
     for data in testLoader:
         inputs, labels = data
         outputs = net(inputs)
-        _, predicted = torch.max(outputs, 1)
+        predicted = (outputs >= 0.80).long()[:,1]
         total += labels.size(0)
         correct += (predicted == labels.long()).sum().item()
 
@@ -95,7 +95,7 @@ print('Accuracy of the network on the 8000 train images: %.5f %%' % (100 * corre
 net.eval()
 with torch.no_grad():
         outputs = net(predict_data)
-        _, predicted = torch.max(outputs, 1)
+        predicted = (outputs >= 0.80).long()[:,1]
         predicted = predicted.numpy()
 
 submission = pd.read_csv('./dataset/test_withoutLable.csv')
